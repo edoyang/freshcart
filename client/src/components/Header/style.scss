@@ -150,7 +150,7 @@ nav {
     .header {
       display: grid;
       width: 100%;
-      gap: 0;
+      gap: 1rem 0;
       grid-template-areas:
         "logo user-info"
         "search search";
