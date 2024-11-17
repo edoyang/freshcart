@@ -1,0 +1,51 @@
+[
+  {
+    "objectId": "1",
+    "name": "Strwaberry 250 ",
+    "image": "/dummy/strawberry.jpg",
+    "price": 2,
+    "original_price": 5,
+    "type": "fruit"
+  },
+  {
+    "objectId": "2",
+    "name": "Indomie Goreng 5pcs",
+    "image": "/dummy/indomie.png",
+    "price": 3,
+    "bonus": 5,
+    "original_price": 3,
+    "type": "food"
+  },
+  {
+    "objectId": "3",
+    "name": "Lynx deodorant 150ml",
+    "image": "/dummy/lynx_150.jpg",
+    "price": 5,
+    "original_price": 5,
+    "type": "beauty"
+  },
+  {
+    "objectId": "4",
+    "name": "Lays 200g",
+    "image": "/dummy/lays_200g.jpg",
+    "price": 2,
+    "original_price": 3,
+    "type": "snacks"
+  },
+  {
+    "objectId": "5",
+    "name": "Fruit Box 150ml",
+    "image": "/dummy/fruit_box_150.jpg",
+    "price": 3,
+    "original_price": 3,
+    "type": "drink"
+  },
+  {
+    "objectId": "6",
+    "name": "Coca Cola 1.5L",
+    "image": "/dummy/coca_cola_1.5.jpg",
+    "price": 2,
+    "original_price": 3,
+    "type": "drink"
+  }
+]

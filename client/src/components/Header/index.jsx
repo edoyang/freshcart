@@ -15,15 +15,15 @@ const Header = () => {
         <p>Delivery in 10 minutes</p>
         <div className="right">
           <Link to="location">
-            <img src="assets/icons/location.svg" alt="location" />
+            <img src="icons/location.svg" alt="location" />
             <p>Deliver to {location || "41110"}</p>
           </Link>
           <Link to="order">
-            <img src="assets/icons/order.svg" alt="order" />
+            <img src="icons/order.svg" alt="order" />
             <p>Track your order</p>
           </Link>
           <Link to="offer">
-            <img src="assets/icons/offer.svg" alt="offer" />
+            <img src="icons/offer.svg" alt="offer" />
             <p>Offers</p>
           </Link>
         </div>
@@ -46,12 +46,12 @@ const Header = () => {
             <Link to="category/other">Other</Link>
           </div>
           <Link to="/">
-            <img src="assets/logo.png" alt="logo" />
+            <img src="logo.png" alt="logo" />
           </Link>
         </div>
 
         <div className="search">
-          <img src="assets/icons/search.svg" alt="search" />
+          <img src="icons/search.svg" alt="search" />
           <input
             type="text"
             placeholder="Search for groceries, essentials and more ..."
@@ -61,24 +61,24 @@ const Header = () => {
         <div className="user-info">
           {user ? (
             <div className="login">
-              <img src="assets/icons/user.svg" alt="user" />
+              <img src="icons/user.svg" alt="user" />
               <p>{user.name}</p>
             </div>
           ) : (
             <Link className="login" to="login">
-              <img src="assets/icons/user.svg" alt="user" />
+              <img src="icons/user.svg" alt="user" />
               <p>Login</p>
             </Link>
           )}
 
           {cart.length > 0 ? (
             <div className="cart">
-              <img src="assets/icons/cart.svg" alt="cart" />
+              <img src="icons/cart.svg" alt="cart" />
               <p>{cart.length}</p>
             </div>
           ) : (
             <Link className="cart" to="cart">
-              <img src="assets/icons/cart.svg" alt="cart" />
+              <img src="icons/cart.svg" alt="cart" />
               <p>Cart</p>
             </Link>
           )}

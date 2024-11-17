@@ -28,7 +28,7 @@ nav {
   .header {
     display: flex;
     align-items: center;
-    padding: 1rem var(--global-padding);
+    padding: var(--global-padding);
     gap: 1rem;
     justify-content: space-between;
 
@@ -110,12 +110,12 @@ nav {
       .search {
         grid-area: search;
         place-self: center;
-        min-width: calc(100vw - 2 * var(--global-padding));
+        min-width: calc(100vw - (3 * var(--global-padding)));
       }
 
       .user-info {
         grid-area: user-info;
-        justify-self: end;
+        justify-content: end;
 
         > * {
           p {
