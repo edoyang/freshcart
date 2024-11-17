@@ -41,8 +41,14 @@ nav {
       gap: var(--global-padding);
 
       > a {
+        height: max-content;
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
           width: 100%;
+          min-height: 30px;
           height: 40px;
           object-fit: cover;
         }
