@@ -38,7 +38,7 @@ nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 2rem;
+      gap: var(--global-padding);
 
       > a {
         img {
@@ -127,29 +127,65 @@ nav {
   }
 }
 
+@media (max-width: 550px) {
+  nav {
+    .top-header {
+      .right {
+        > a p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
   nav {
     .header {
       display: grid;
       width: 100%;
+      gap: 0;
       grid-template-areas:
         "logo user-info"
         "search search";
-    }
 
-    .logo {
-      grid-area: logo;
-    }
+      .logo {
+        grid-area: logo;
 
-    .search {
-      grid-area: search;
-      place-self: center;
-      min-width: calc(100vw - 2 * var(--global-padding));
-    }
+        > a {
+          img {
+            width: max-content;
+            max-width: 40vw;
+            min-width: 162px;
+            height: 30px;
+          }
+        }
+      }
 
-    .user-info {
-      grid-area: user-info;
-      justify-self: end;
+      .search {
+        grid-area: search;
+        place-self: center;
+        min-width: calc(100vw - 2 * var(--global-padding));
+      }
+
+      .user-info {
+        grid-area: user-info;
+        justify-self: end;
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  nav {
+    .header {
+      .logo {
+        > a {
+          img {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
