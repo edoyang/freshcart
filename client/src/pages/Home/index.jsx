@@ -21,10 +21,10 @@ const Home = () => {
         <div className="slider-container">
           <Slider {...settings}>
             <div>
-              <img src="src/assets/banner/banner1.jpg" alt="hero1" />
+              <img src="assets/banner/banner1.jpg" alt="hero1" />
             </div>
             <div>
-              <img src="src/assets/banner/banner1.jpg" alt="hero1" />
+              <img src="assets/banner/banner1.jpg" alt="hero1" />
             </div>
           </Slider>
         </div>
