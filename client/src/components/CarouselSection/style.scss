@@ -1,0 +1,23 @@
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  padding: var(--global-padding);
+  gap: 2rem;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+
+    h1 {
+      border-bottom: 2px solid var(--green);
+    }
+  }
+
+  .carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+  }
+}
