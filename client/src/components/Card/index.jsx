@@ -1,11 +1,18 @@
 import { useState } from "react";
 import "./style.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../redux/slices/cartSlice";
 
 const Card = ({ name, image, price, original_price, bonus }) => {
   const [imageError, setImageError] = useState(false);
   const percentageOff = original_price
     ? Math.floor(((original_price - price) / original_price) * 100)
     : 0;
+
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart({ name, price, quantity: 1 }));
+  };
 
   return (
     <div className="card">
@@ -48,7 +55,9 @@ const Card = ({ name, image, price, original_price, bonus }) => {
             <s>${original_price}</s>
           </div>
         )}
-        <button className="add-to-cart">Add to Cart</button>
+        <button className="add-to-cart" onClick={handleAddToCart}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

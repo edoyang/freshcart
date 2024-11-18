@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import "./hamburger.scss";
+import { removeFromCart } from "../../redux/slices/cartSlice";
 
 const Header = () => {
   const location = useSelector((state) => state.user.location);
@@ -9,6 +10,9 @@ const Header = () => {
   const cart = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
+  const removeFromCart = (item) => {
+    dispatch(removeFromCart(item));
+  };
   return (
     <nav>
       <div className="top-header">
@@ -65,22 +69,24 @@ const Header = () => {
               <p>{user.name}</p>
             </div>
           ) : (
-            <Link className="login" to="login">
+            <div className="login" to="login">
               <img src="icons/user.svg" alt="user" />
               <p>Login</p>
-            </Link>
+            </div>
           )}
 
           {cart.length > 0 ? (
             <div className="cart">
               <img src="icons/cart.svg" alt="cart" />
-              <p>{cart.length}</p>
+              <p>Cart</p>
+
+              <div className="cart-container">{cart.length}</div>
             </div>
           ) : (
-            <Link className="cart" to="cart">
+            <div className="cart" to="cart">
               <img src="icons/cart.svg" alt="cart" />
               <p>Cart</p>
-            </Link>
+            </div>
           )}
         </div>
       </div>

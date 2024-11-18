@@ -43,6 +43,11 @@ const Home = () => {
   };
 
   const fruitData = data.filter((item) => item.type === "fruit");
+  const drinkData = data.filter((item) => item.type === "drink");
+  const snackData = data.filter((item) => item.type === "snack");
+  const discountData = data.filter(
+    (item) => item.original_price / item.price > 1.5
+  );
 
   return (
     <section className="home-page">
@@ -59,7 +64,13 @@ const Home = () => {
         </div>
       </div>
 
-      <CarouselSection data={data} title={"Check Our Top Sale"} />
+      <CarouselSection data={data} title={"Check Our"} highlight={"Top Sale"} />
+
+      <CarouselSection
+        data={discountData}
+        title={"Supersaver "}
+        highlight={"Up to 50% OFF !"}
+      />
 
       <CarouselSection data={fruitData} title={"Browse The FRESH"} />
 
@@ -82,7 +93,9 @@ const Home = () => {
         </div>
       </div>
 
-      <h1>Home</h1>
+      <CarouselSection data={drinkData} title={"Thirsty? Grab a Drink"} />
+
+      <CarouselSection data={snackData} title={"Snack Time"} />
     </section>
   );
 };

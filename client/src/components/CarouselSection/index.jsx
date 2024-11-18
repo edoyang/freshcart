@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import Card from "../Card";
 import "./style.scss";
 
-const CarouselSection = ({ data, title }) => {
+const CarouselSection = ({ data, title, highlight }) => {
   return (
     <div className="carousel-section">
       <div className="title">
-        <h1>{title}</h1>
+        <h1>
+          {title}
+          <p>{highlight}</p>
+        </h1>
         <Link to="category/fruit"> View All </Link>
       </div>
 
