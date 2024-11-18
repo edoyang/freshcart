@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./style.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice";
 
-const Card = ({ name, image, price, original_price, bonus }) => {
+const Card = ({ id, name, image, price, original_price, bonus }) => {
   const [imageError, setImageError] = useState(false);
   const percentageOff = original_price
     ? Math.floor(((original_price - price) / original_price) * 100)
@@ -11,7 +11,7 @@ const Card = ({ name, image, price, original_price, bonus }) => {
 
   const dispatch = useDispatch();
   const handleAddToCart = () => {
-    dispatch(addToCart({ name, price, quantity: 1 }));
+    dispatch(addToCart({ id, name, price, quantity: 1, image }));
   };
 
   return (
@@ -21,11 +21,9 @@ const Card = ({ name, image, price, original_price, bonus }) => {
           src={image}
           alt="product"
           onError={() => setImageError(true)}
-          className={imageError ? "error" : ""}
+          className={imageError ? "error-image" : ""}
         />
-        {original_price == price ? (
-          <></>
-        ) : (
+        {original_price == price ? null : (
           <div className="promo-tag">
             <p>{percentageOff}%</p>
             <p>OFF</p>
@@ -55,7 +53,7 @@ const Card = ({ name, image, price, original_price, bonus }) => {
             <s>${original_price}</s>
           </div>
         )}
-        <button className="add-to-cart" onClick={handleAddToCart}>
+        <button data-id={id} className="add-to-cart" onClick={handleAddToCart}>
           Add to Cart
         </button>
       </div>

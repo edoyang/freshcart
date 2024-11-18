@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 import "./hamburger.scss";
 import { removeFromCart } from "../../redux/slices/cartSlice";
+import Cart from "../Cart";
 
 const Header = () => {
   const location = useSelector((state) => state.user.location);
   const user = useSelector((state) => state.user.user);
-  const cart = useSelector((state) => state.cart.items);
-  const dispatch = useDispatch();
 
-  const removeFromCart = (item) => {
-    dispatch(removeFromCart(item));
-  };
   return (
     <nav>
       <div className="top-header">
@@ -75,19 +71,7 @@ const Header = () => {
             </div>
           )}
 
-          {cart.length > 0 ? (
-            <div className="cart">
-              <img src="icons/cart.svg" alt="cart" />
-              <p>Cart</p>
-
-              <div className="cart-container">{cart.length}</div>
-            </div>
-          ) : (
-            <div className="cart" to="cart">
-              <img src="icons/cart.svg" alt="cart" />
-              <p>Cart</p>
-            </div>
-          )}
+          <Cart />
         </div>
       </div>
     </nav>

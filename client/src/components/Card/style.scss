@@ -30,9 +30,10 @@
       object-fit: cover;
     }
 
-    .error {
-      content: url("https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg");
+    .error-image {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .promo-tag {

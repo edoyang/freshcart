@@ -54,3 +54,8 @@ a {
 section > * {
   margin-bottom: var(--global-padding);
 }
+
+.error-image {
+  content: url("https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg");
+  width: 100%;
+}
