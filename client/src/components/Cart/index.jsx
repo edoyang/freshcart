@@ -65,6 +65,7 @@ const Cart = () => {
       <div onClick={toggleCart} className="cart-header">
         <img src="icons/cart.svg" alt="cart" />
         <p>Cart</p>
+        {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
       </div>
 
       {isCartOpen && cart.length > 0 && (
@@ -124,7 +125,7 @@ const CartItem = ({
       <div className="cart-info">
         <p className="name">{item.name}</p>
         <p className="price">${item.price * item.quantity}</p>
-        <p className="quantity">Quantity: {item.quantity}</p>
+        <p className="quantity">{item.quantity}</p>
         <div className="buttons">
           <button onClick={() => handleRemoveCart(item)}>-</button>
           <button onClick={() => handleAddItem(item)}>+</button>

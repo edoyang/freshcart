@@ -126,7 +126,12 @@ nav {
         justify-content: end;
 
         > * {
-          p {
+          .cart-header {
+            > p {
+              display: none;
+            }
+          }
+          > p {
             display: none;
           }
         }
