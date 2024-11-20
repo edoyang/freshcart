@@ -16,8 +16,8 @@ const CarouselSection = ({ data, title, highlight }) => {
       <div className="carousel">
         {data.slice(0, 5).map((item) => (
           <Card
-            key={item.objectId}
-            id={item.objectId}
+            key={item.id}
+            id={item.id}
             name={item.name}
             image={item.image}
             price={item.price}
