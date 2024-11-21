@@ -3,11 +3,35 @@ import { useEffect, useState } from "react";
 import CarouselSection from "../../components/CarouselSection";
 import Hero from "../../components/Hero";
 import PromoBanner from "../../components/PromoBanner";
-import dummyData from "../../../public/data/products.json"; // Dummy data
+import dummyData from "../../../public/data/products.json";
+import Loading from "../../components/Loading";
 
 const Home = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `${import.meta.env.VITE_BACKEND_API}/products`
+  //       );
+  //       if (!response.ok) throw new Error("Failed to fetch");
+  //       const result = await response.json();
+  //       setData(result);
+  //     } catch (error) {
+  //       console.error("Error fetching products, using dummy data:", error);
+  //       setData(dummyData);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchProducts();
+  // }, []);
+
+  // if (loading) return <Loading />;
+
+  const data = dummyData;
 
   const HeroImages = ["banner/banner1.jpg", "banner/banner1.jpg"];
   const banners = [
@@ -16,26 +40,6 @@ const Home = () => {
     { banner: "banner/offer3.png", link: "/products" },
   ];
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_BACKEND_API}/products`
-        );
-        if (!response.ok) throw new Error("Failed to fetch");
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching products, using dummy data:", error);
-        setData(dummyData);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
   const fruitData = data.filter((item) => item.type === "fruit");
   const drinkData = data.filter((item) => item.type === "drink");
   const snackData = data.filter((item) => item.type === "snack");
@@ -43,13 +47,16 @@ const Home = () => {
     (item) => item.original_price / item.price > 1.5
   );
 
-  if (loading) return <div>Loading...</div>;
-
   return (
     <section className="home-page">
       <Hero HeroImages={HeroImages} />
 
-      <CarouselSection data={data} title={"Check Our"} highlight={"Top Sale"} />
+      <CarouselSection
+        data={data}
+        title={"Check Our"}
+        highlight={"Top Sale"}
+        limit={10}
+      />
       <CarouselSection
         data={discountData}
         title={"Supersaver "}

@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import Card from "../Card";
 import "./style.scss";
 
-const CarouselSection = ({ data, title, highlight }) => {
+const CarouselSection = ({ data, title, highlight, limit }) => {
+  const displayLimit = limit || 5;
+
   return (
     <div className="carousel-section">
       <div className="title">
@@ -14,7 +16,7 @@ const CarouselSection = ({ data, title, highlight }) => {
       </div>
 
       <div className="carousel">
-        {data.slice(0, 5).map((item) => (
+        {data.slice(0, displayLimit).map((item) => (
           <Card
             key={item.id}
             id={item.id}

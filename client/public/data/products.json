@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "name": "Strwaberry 250 ",
+    "name": "Strawberry 250g",
     "image": "/dummy/strawberry.jpg",
     "price": 2,
     "original_price": 5,
@@ -18,8 +18,8 @@
   },
   {
     "id": "3",
-    "name": "Lynx deodorant 150ml",
-    "image": "/dummy/lynx_150.jpg",
+    "name": "Lynx Aerosol Africa Deodorant 165ml",
+    "image": "https://shop.coles.com.au/wcsstore/Coles-CAS/images/3/7/2/3722089_L-zm.jpg",
     "price": 5,
     "original_price": 5,
     "type": "beauty"
@@ -43,9 +43,41 @@
   {
     "id": "6",
     "name": "Coca Cola 1.5L",
-    "image": "/dummy/coca_cola_1.5.jpg",
+    "image": "/dummy/coca_cola_1.5.png",
     "price": 2,
     "original_price": 3,
     "type": "drink"
+  },
+  {
+    "id": "7",
+    "name": "Shapes 200g",
+    "image": "/dummy/shapes_200g.png",
+    "price": 2,
+    "original_price": 3,
+    "type": "snack"
+  },
+  {
+    "id": "8",
+    "name": "Lynx Aerosol Ice Chill Deodorant 165ml",
+    "image": "https://shop.coles.com.au/wcsstore/Coles-CAS/images/3/7/2/3722045_L-zm.jpg",
+    "price": 2,
+    "original_price": 3,
+    "type": "beauty"
+  },
+  {
+    "id": "9",
+    "name": "Doritos 200g",
+    "image": "/dummy/doritos_200g.png",
+    "price": 2,
+    "original_price": 3,
+    "type": "snack"
+  },
+  {
+    "id": "10",
+    "name": "Cheetos 200g",
+    "image": "/dummy/cheetos_200g.png",
+    "price": 2,
+    "original_price": 3,
+    "type": "snack"
   }
 ]

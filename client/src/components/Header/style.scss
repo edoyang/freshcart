@@ -35,18 +35,18 @@ nav {
 
     .logo {
       width: 250px;
-      height: max-content;
+      height: 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: var(--global-padding);
 
       > a {
-        height: max-content;
         width: max-content;
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
           width: 100%;
           min-height: 30px;
@@ -70,10 +70,57 @@ nav {
         border: none;
         background-color: var(--grey);
         color: var(--black);
-        width: 80%;
+        width: 100%;
 
         &:focus {
           outline: none;
+        }
+      }
+
+      .result-container {
+        position: absolute;
+        top: 80%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        padding: var(--global-padding) 0;
+
+        @media screen and (max-width: 768px) {
+          top: 100%;
+        }
+        .result {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          background-color: var(--white);
+          padding: var(--global-padding);
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: var(--grey);
+          }
+
+          .image-container {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+          }
         }
       }
     }

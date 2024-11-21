@@ -1,13 +1,34 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import "./hamburger.scss";
-import { removeFromCart } from "../../redux/slices/cartSlice";
 import Cart from "../Cart";
 
-const Header = () => {
+const Header = ({ data }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+  const [imageErrors, setImageErrors] = useState({}); // Manage error state as an object
   const location = useSelector((state) => state.user.location);
   const user = useSelector((state) => state.user.user);
+
+  const handleSearch = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+
+    if (query) {
+      const results = data.filter((item) =>
+        item.name.toLowerCase().includes(query)
+      );
+      setFilteredResults(results.slice(0, 3)); // Limit results to 3
+    } else {
+      setFilteredResults([]);
+    }
+  };
+
+  const handleImageError = (id) => {
+    setImageErrors((prev) => ({ ...prev, [id]: true })); // Mark image as failed by its ID
+  };
 
   return (
     <nav>
@@ -55,7 +76,33 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search for groceries, essentials and more ..."
+            value={searchQuery}
+            onChange={handleSearch}
           />
+          {filteredResults.length > 0 && (
+            <div className="result-container">
+              {filteredResults.map((item) => (
+                <Link
+                  key={item.id}
+                  className="result"
+                  to={`/product/${item.id}`}
+                >
+                  <div className="image-container">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      onError={() => handleImageError(item.id)}
+                      className={imageErrors[item.id] ? "error-image" : ""}
+                    />
+                  </div>
+                  <div className="info">
+                    <p>{item.name}</p>
+                    <p>${item.price}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="user-info">
@@ -65,7 +112,7 @@ const Header = () => {
               <p>{user.name}</p>
             </div>
           ) : (
-            <div className="login" to="login">
+            <div className="login">
               <img src="icons/user.svg" alt="user" />
               <p>Login</p>
             </div>
