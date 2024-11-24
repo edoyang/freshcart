@@ -4,6 +4,7 @@ nav {
   left: 0;
   z-index: 100;
   background-color: var(--white);
+
   .top-header {
     display: flex;
     justify-content: space-between;
@@ -18,7 +19,7 @@ nav {
     align-items: center;
     gap: 1rem;
 
-    > * {
+    >* {
       display: flex;
       gap: 0.25rem;
       color: var(--black);
@@ -41,7 +42,7 @@ nav {
       align-items: center;
       gap: var(--global-padding);
 
-      > a {
+      >a {
         width: max-content;
         display: flex;
         justify-content: center;
@@ -51,92 +52,24 @@ nav {
           width: 100%;
           min-height: 30px;
           height: 40px;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
 
-    .search {
-      flex: auto;
-      display: flex;
-      background-color: var(--grey);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      gap: 1rem;
-      width: auto;
-      max-width: 80vw;
-
-      > input {
-        border: none;
-        background-color: var(--grey);
-        color: var(--black);
-        width: 100%;
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      .result-container {
-        position: absolute;
-        top: 80%;
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
-        display: flex;
-        flex-direction: column;
-        z-index: 2;
-        padding: var(--global-padding) 0;
-
-        @media screen and (max-width: 768px) {
-          top: 100%;
-        }
-        .result {
-          display: flex;
-          gap: 1rem;
-          align-items: center;
-          background-color: var(--white);
-          padding: var(--global-padding);
-          transition: all 0.3s ease-in-out;
-
-          &:hover {
-            background-color: var(--grey);
-          }
-
-          .image-container {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 100%;
-              object-fit: cover;
-            }
-          }
-
-          .info {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-          }
-        }
-      }
-    }
 
     .user-info {
       display: flex;
       gap: 1rem;
 
-      > * {
+      >* {
         display: flex;
         gap: 0.5em;
         align-items: center;
         justify-content: center;
         z-index: 3;
 
-        > img {
+        >img {
           height: 100%;
           max-height: 20px;
           object-fit: cover;
@@ -172,13 +105,14 @@ nav {
         grid-area: user-info;
         justify-content: end;
 
-        > * {
+        >* {
           .cart-header {
-            > p {
+            >p {
               display: none;
             }
           }
-          > p {
+
+          >p {
             display: none;
           }
         }
@@ -191,7 +125,7 @@ nav {
   nav {
     .top-header {
       .right {
-        > a p {
+        >a p {
           display: none;
         }
       }
@@ -212,7 +146,7 @@ nav {
       .logo {
         grid-area: logo;
 
-        > a {
+        >a {
           img {
             width: max-content;
             max-width: 40vw;
@@ -240,7 +174,7 @@ nav {
   nav {
     .header {
       .logo {
-        > a {
+        >a {
           img {
             display: none;
           }
