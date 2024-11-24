@@ -11,8 +11,8 @@ const Search = ({ data }) => {
 
     const deleteSearch = () => {
         setSearchQuery("");
-        setFilteredResults([]);
         setContainerState("close");
+        setFilteredResults([]);
     };
 
     const handleSearch = (e) => {
