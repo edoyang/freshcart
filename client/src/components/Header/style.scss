@@ -19,7 +19,7 @@ nav {
     align-items: center;
     gap: 1rem;
 
-    >* {
+    > * {
       display: flex;
       gap: 0.25rem;
       color: var(--black);
@@ -42,7 +42,7 @@ nav {
       align-items: center;
       gap: var(--global-padding);
 
-      >a {
+      > a {
         width: max-content;
         display: flex;
         justify-content: center;
@@ -57,19 +57,18 @@ nav {
       }
     }
 
-
     .user-info {
       display: flex;
       gap: 1rem;
 
-      >* {
+      > * {
         display: flex;
         gap: 0.5em;
         align-items: center;
         justify-content: center;
         z-index: 3;
 
-        >img {
+        > img {
           height: 100%;
           max-height: 20px;
           object-fit: cover;
@@ -105,14 +104,14 @@ nav {
         grid-area: user-info;
         justify-content: end;
 
-        >* {
+        > * {
           .cart-header {
-            >p {
+            > p {
               display: none;
             }
           }
 
-          >p {
+          > p {
             display: none;
           }
         }
@@ -125,7 +124,7 @@ nav {
   nav {
     .top-header {
       .right {
-        >a p {
+        > a p {
           display: none;
         }
       }
@@ -136,17 +135,8 @@ nav {
 @media (max-width: 480px) {
   nav {
     .header {
-      display: grid;
-      width: 100%;
-      gap: 1rem 0;
-      grid-template-areas:
-        "logo user-info"
-        "search search";
-
       .logo {
-        grid-area: logo;
-
-        >a {
+        > a {
           img {
             width: max-content;
             max-width: 40vw;
@@ -159,7 +149,7 @@ nav {
       .search {
         grid-area: search;
         place-self: center;
-        min-width: calc(100vw - 2 * var(--global-padding));
+        width: calc(100vw - 2 * var(--global-padding));
       }
 
       .user-info {
@@ -174,7 +164,7 @@ nav {
   nav {
     .header {
       .logo {
-        >a {
+        > a {
           img {
             display: none;
           }

@@ -59,3 +59,8 @@ section > * {
   content: url("https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg");
   width: 100%;
 }
+
+h1 {
+  font-size: var(--step-1);
+  font-weight: 600;
+}

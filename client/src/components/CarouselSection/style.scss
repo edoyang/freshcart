@@ -11,6 +11,7 @@
     border-bottom: 1px solid #ededed;
 
     h1 {
+      font-size: var(--step-0);
       border-bottom: 2px solid var(--green);
       display: flex;
       align-items: center;
@@ -19,6 +20,10 @@
       p {
         color: var(--green);
       }
+    }
+
+    > a {
+      color: var(--green);
     }
   }
 
