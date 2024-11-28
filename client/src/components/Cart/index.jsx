@@ -124,7 +124,7 @@ const CartItem = ({
       </div>
       <div className="cart-info">
         <p className="name">{item.name}</p>
-        <p className="price">${item.price * item.quantity}</p>
+        <p className="price">${(item.price * item.quantity).toFixed(2)}</p>
         <p className="quantity">{item.quantity}</p>
         <div className="buttons">
           <button
