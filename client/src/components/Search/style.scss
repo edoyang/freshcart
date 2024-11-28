@@ -31,11 +31,18 @@
     border: 2px solid var(--green);
     opacity: 0.5;
     cursor: pointer;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+
     img {
       width: 100%;
       object-fit: cover;
       height: auto;
     }
+  }
+
+  input:placeholder-shown + .cancel-button {
+    scale: 0;
   }
 
   .result-container {

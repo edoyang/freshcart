@@ -1,0 +1,21 @@
+.slider-desktop {
+  .slick-slider {
+    overflow: hidden;
+
+    .slick-list {
+      .slick-track {
+        .slick-slide {
+          div {
+            .card {
+              .card-footer {
+                button {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

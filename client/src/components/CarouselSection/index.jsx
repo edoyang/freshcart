@@ -17,16 +17,18 @@ const CarouselSection = ({ data, title, highlight, limit }) => {
 
       <div className="carousel">
         {data.slice(0, displayLimit).map((item) => (
-          <Card
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            image={item.image}
-            price={item.price}
-            original_price={item.original_price}
-            promo={item.promo}
-            bonus={item.bonus}
-          />
+          <div>
+            <Card
+              key={item.id}
+              id={item.id}
+              name={item.name}
+              image={item.image}
+              price={item.price}
+              original_price={item.original_price}
+              promo={item.promo}
+              bonus={item.bonus}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -14,6 +14,10 @@ const Card = ({ id, name, image, price, original_price, bonus }) => {
     dispatch(addToCart({ id, name, price, quantity: 1, image }));
   };
 
+  const onLinkMouseDown = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="card">
       <div className="image-container">
@@ -53,7 +57,11 @@ const Card = ({ id, name, image, price, original_price, bonus }) => {
             <s>${original_price}</s>
           </div>
         )}
-        <button data-id={id} className="add-to-cart" onClick={handleAddToCart}>
+        <button
+          data-id={id}
+          className="add-to-cart"
+          onClick={handleAddToCart}
+          onMouseDown={onLinkMouseDown}>
           Add to Cart
         </button>
       </div>

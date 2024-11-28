@@ -1,5 +1,6 @@
 .cart {
   position: relative;
+
   .cart-header {
     display: flex;
     gap: 0.5rem;
@@ -38,6 +39,23 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    .total {
+      .buttons {
+        display: flex;
+        justify-content: end;
+        gap: 1rem;
+
+        button {
+          background-color: var(--green);
+          color: var(--white);
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          border: none;
+        }
+      }
+    }
 
     .cart-item {
       display: flex;
@@ -90,6 +108,26 @@
           grid-area: buttons;
           display: flex;
           gap: 0.5rem;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            background-color: transparent;
+            color: var(--green);
+            border: 1px solid var(--green);
+            border-radius: 500px;
+            padding: 0.5rem;
+            cursor: pointer;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .increase-button,
+          .decrease-button {
+            width: 30px;
+          }
         }
       }
     }
@@ -102,5 +140,25 @@
 
   .empty {
     white-space: nowrap;
+  }
+
+  @media screen and (max-width: 452px) {
+    position: static;
+
+    .cart-container {
+      width: 100%;
+
+      .cart-item {
+        .cart-info {
+          width: 100%;
+          .quantity {
+            width: max-content;
+            align-items: center;
+            justify-self: end;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
   }
 }

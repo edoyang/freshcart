@@ -80,13 +80,13 @@ const Cart = () => {
             />
           ))}
           <div className="total">
+            <p>Total Price: ${totalPrice.toFixed(2)}</p>
             <div className="buttons">
               <button to="/order">Checkout</button>
               <button onClick={handleRemoveAllItems} className="removeAllItems">
                 Remove Cart
               </button>
             </div>
-            <p>Total Price: ${totalPrice.toFixed(2)}</p>
           </div>
         </div>
       )}
@@ -127,9 +127,21 @@ const CartItem = ({
         <p className="price">${item.price * item.quantity}</p>
         <p className="quantity">{item.quantity}</p>
         <div className="buttons">
-          <button onClick={() => handleRemoveCart(item)}>-</button>
-          <button onClick={() => handleAddItem(item)}>+</button>
-          <button onClick={() => handleRemoveItem(item)}>Remove</button>
+          <button
+            className="decrease-button"
+            onClick={() => handleRemoveCart(item)}>
+            -
+          </button>
+          <button
+            className="increase-button"
+            onClick={() => handleAddItem(item)}>
+            +
+          </button>
+          <button
+            className="remove-button"
+            onClick={() => handleRemoveItem(item)}>
+            Remove
+          </button>
         </div>
       </div>
     </div>

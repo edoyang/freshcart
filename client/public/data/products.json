@@ -3,33 +3,33 @@
     "id": "1",
     "name": "Strawberry 250g",
     "image": "/dummy/strawberry.jpg",
-    "price": 2,
-    "original_price": 5,
+    "price": 3.2,
+    "original_price": 8,
     "type": "fruit"
   },
   {
     "id": "2",
     "name": "Indomie Goreng 5pcs",
     "image": "/dummy/indomie.png",
-    "price": 3,
-    "bonus": 5,
-    "original_price": 3,
+    "price": 3.95,
+    "bonus": 2,
+    "original_price": 5,
     "type": "food"
   },
   {
     "id": "3",
     "name": "Lynx Aerosol Africa Deodorant 165ml",
     "image": "https://shop.coles.com.au/wcsstore/Coles-CAS/images/3/7/2/3722089_L-zm.jpg",
-    "price": 5,
-    "original_price": 5,
+    "price": 10,
+    "original_price": 12,
     "type": "beauty"
   },
   {
     "id": "4",
-    "name": "Lays 200g",
-    "image": "/dummy/lays_200g.jpg",
-    "price": 2,
-    "original_price": 3,
+    "name": "Dr. Smith's Original",
+    "image": "https://shop.coles.com.au/wcsstore/Coles-CAS/images/2/3/5/2358275-zm.jpg",
+    "price": 3.45,
+    "original_price": 8,
     "type": "snacks"
   },
   {
@@ -44,40 +44,48 @@
     "id": "6",
     "name": "Coca Cola 1.5L",
     "image": "/dummy/coca_cola_1.5.png",
-    "price": 2,
-    "original_price": 3,
+    "price": 3.85,
+    "original_price": 4,
     "type": "drink"
   },
   {
     "id": "7",
     "name": "Shapes 200g",
     "image": "/dummy/shapes_200g.png",
-    "price": 2,
-    "original_price": 3,
+    "price": 4,
+    "original_price": 4,
     "type": "snack"
   },
   {
     "id": "8",
     "name": "Lynx Aerosol Ice Chill Deodorant 165ml",
     "image": "https://shop.coles.com.au/wcsstore/Coles-CAS/images/3/7/2/3722045_L-zm.jpg",
-    "price": 2,
-    "original_price": 3,
+    "price": 10,
+    "original_price": 12,
     "type": "beauty"
   },
   {
     "id": "9",
     "name": "Doritos 200g",
     "image": "/dummy/doritos_200g.png",
-    "price": 2,
-    "original_price": 3,
+    "price": 4.8,
+    "original_price": 6.5,
     "type": "snack"
   },
   {
     "id": "10",
     "name": "Cheetos 200g",
     "image": "/dummy/cheetos_200g.png",
-    "price": 2,
-    "original_price": 3,
+    "price": 3.75,
+    "original_price": 5,
     "type": "snack"
+  },
+  {
+    "id": "11",
+    "name": "Raspberry 170g",
+    "image": "https://shop.coles.com.au/wcsstore/Coles-CAS/images/1/3/4/134029-zm.jpg",
+    "price": 3,
+    "original_price": 6,
+    "type": "fruit"
   }
 ]
