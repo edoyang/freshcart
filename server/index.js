@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: "https://freshcart-client.vercel.app", // Allow only your frontend
+  origin: "*",
   methods: ["GET", "POST"], // Allow specific HTTP methods
   allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
 };
