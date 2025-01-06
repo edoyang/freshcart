@@ -8,6 +8,7 @@ import {
 } from "../../redux/slices/cartSlice";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import CheckoutButton from "../CheckoutButton";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -82,7 +83,7 @@ const Cart = () => {
           <div className="total">
             <p>Total Price: ${totalPrice.toFixed(2)}</p>
             <div className="buttons">
-              <button to="/order">Checkout</button>
+              <CheckoutButton />
               <button onClick={handleRemoveAllItems} className="removeAllItems">
                 Remove Cart
               </button>

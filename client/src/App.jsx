@@ -5,6 +5,7 @@ import NoPage from "./pages/NoPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import data from "../public/data/products.json";
+import Success from "./pages/Success";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="" Component={Home} />
         <Route path="/product/:id" Component={Product} />
+        <Route path="/success" Component={Success} />
         <Route path="*" Component={NoPage} />
       </Routes>
       <Footer />
