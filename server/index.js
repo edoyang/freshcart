@@ -16,6 +16,11 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Apply CORS options globally
 app.use(express.json());
 
+// for testing on route /
+app.get("/", (req, res) => {
+  res.send("Hello from server");
+});
+
 // Create Checkout Session
 app.post("/create-checkout-session", async (req, res) => {
   const { cart } = req.body;
