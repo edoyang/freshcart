@@ -60,7 +60,7 @@ const Search = ({ data }) => {
   }, []);
 
   return (
-    <div className="search">
+    <label className="search" htmlFor="freshcart-search">
       <img src="icons/search.svg" alt="search" />
       <input
         type="text"
@@ -68,6 +68,8 @@ const Search = ({ data }) => {
         value={searchQuery}
         onChange={handleSearch}
         onFocus={openContainerState}
+        name="freshcart-search"
+        id="freshcart-search"
       />
       <button className="cancel-button" onClick={deleteSearch}>
         <img src="icons/x.svg" alt="close" />
@@ -98,7 +100,7 @@ const Search = ({ data }) => {
           ))}
         </div>
       )}
-    </div>
+    </label>
   );
 };
 

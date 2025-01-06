@@ -33,7 +33,11 @@ const Home = () => {
 
   const data = dummyData;
 
-  const HeroImages = ["banner/banner1.jpg", "banner/banner1.jpg"];
+  const HeroImages = [
+    "banner/banner1.jpg",
+    "banner/banner1.jpg",
+    "banner/banner1.jpg",
+  ];
   const banners = [
     { banner: "banner/offer1.png", link: "/products" },
     { banner: "banner/offer2.png", link: "/products" },

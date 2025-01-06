@@ -29,11 +29,19 @@
   --hamburger-animation: 0.2s ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
   --bar-x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  --gap: 1rem;
 }
 
 @media (max-width: 768px) {
   :root {
     --global-padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --gap: 0.5rem;
   }
 }
 
