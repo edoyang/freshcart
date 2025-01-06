@@ -7,7 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: "https://freshcart-client.vercel.app", // Allow only your frontend
+  methods: ["GET", "POST"], // Allow specific HTTP methods
+  allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
+};
+
+app.use(cors(corsOptions)); // Apply CORS options globally
 app.use(express.json());
 
 // Create Checkout Session
@@ -30,7 +36,7 @@ app.post("/create-checkout-session", async (req, res) => {
       })),
       mode: "payment",
       success_url: `${process.env.CLIENT_URL}/#/success`,
-      cancel_url: `${process.env.CLIENT_URL}/#`,
+      cancel_url: `${process.env.CLIENT_URL}/#/`,
     });
 
     res.status(200).json({ id: session.id });
