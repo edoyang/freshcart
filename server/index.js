@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); // Your Stripe Secret Key
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -16,6 +15,7 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Apply CORS options globally
 app.use(express.json());
 
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); // Your Stripe Secret Key
 // for testing on route /
 app.get("/", (req, res) => {
   res.send("Hello from server");
@@ -51,4 +51,6 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server is running`);
+});
